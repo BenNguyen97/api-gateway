@@ -23,7 +23,7 @@ spec:
   selector:
     matchLabels:
       app: api-gateway
-  stategy:
+  strategy:
     type: Recreate
   template:
     metadata:
@@ -33,7 +33,7 @@ spec:
     spec:
       serviceAccountName: default
       containers:
-        - images: 774305578623.dkr.ecr.ap-southeast-1.amazonaws.com/api-gateway-luan:dev
+        - image: 774305578623.dkr.ecr.ap-southeast-1.amazonaws.com/api-gateway-luan:dev
           name: api-gateway
           imagePullPolicy: Always
           ports:
